@@ -11,7 +11,7 @@ void upperTriangularMatrix(float arr[n][n + 1])
     {
         for (int j = 0; j < n; ++j) //j for colbs
         {
-            if (j > i)  //skipping (0,0)
+            if (j != i)  //skipping (0,0)
             {
                 float ratio = arr[j][i] / arr[i][i];
                 for (int k = 0; k < n + 1; k++)
@@ -32,21 +32,12 @@ void upperTriangularMatrix(float arr[n][n + 1])
         }
     }
 }
-void backSubstitution(float arr[n][n + 1])
+void findVals(float arr[n][n + 1])
 {
-    float value[n];
-    value[n - 1] = arr[n - 1][n] / arr[n - 1][n - 1];   //back substitution
-    for (int i = n - 2; i >= 0; --i)
+    for (int i = 0; i < n; i++)
     {
-        float sum = 0;
-        for (int j = i + 1; j < n; ++j)
-        {
-            sum = sum + arr[i][j] * value[j];
-        }
-        value[i] = (arr[i][n] - sum) / arr[i][i];
+        printf("Value of unknown %d = %f\n", i + 1, arr[i][n] / arr[i][i]);
     }
-    for (int i = 0; i < n; ++i)
-        pf("unknown %d: %f\n", i + 1, value[i]);
 }
 int main()
 {
@@ -65,6 +56,6 @@ int main()
         }
     }
     upperTriangularMatrix(arr);  //upper triangular matrix
-    backSubstitution(arr);   //back substitution
+    findVals(arr);   //back substitution
     return 0;
 }

@@ -1,4 +1,4 @@
-//	Gauss elemenation method
+// Gauss elemenation method
 #include <stdio.h>
 #define pf printf
 #define sf scanf
@@ -45,9 +45,10 @@ void backSubs(float arr[][n + 1])
 			sum = sum + arr[i][j] * value[j];
 		value[i] = (arr[i][n] - sum) / arr[i][i];
 	}
-	for (int i = 0; i < n; ++i)
+	pf("roots are: ");
+	for (int i = 0; i < 3; ++i)
 	{
-		pf("%f ", value[i]);
+		pf("%f\t", value[i]);
 	}
 }
 void  output(float arr[n][n + 1])

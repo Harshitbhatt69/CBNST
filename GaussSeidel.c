@@ -2,7 +2,7 @@
 #include<math.h>
 #define pf printf
 #define sf scanf
-#define err 0.001
+#define err 0.0001
 int ite;
 float solnx(float y, float z)
 {
@@ -18,10 +18,11 @@ float solnz(float x, float y)
 }
 void soln(float arr[3][4])
 {
-	float x, y, z;
-	x = arr[0][3] / arr[0][0];
-	y = arr[1][3] / arr[1][1];
-	z = arr[2][3] / arr[2][2];
+	float x = 0, y = 0, z = 0;
+	x = solnx(y, z);
+	y = solny(x, z);
+	z = solnz(x, y);
+	ite--;
 	while (ite--)
 	{
 		float tempx = x;
@@ -35,7 +36,6 @@ void soln(float arr[3][4])
 		pf("value of new x: %f, y: %f, z:%f\n", x, y, z);
 		if ((fabs(tempx - x) < err) || (fabs(tempy - y) < err) || (fabs(tempz - z) < err))
 		{
-
 			pf("Iteration used: %d \n", 17 - ite);
 			pf("Root found... \n");
 			pf("Value of x: %f, y: %f, z: %f", x, y, z);

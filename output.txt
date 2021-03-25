@@ -12,6 +12,10 @@ value of old x: 0.340131, y: 0.283911, z:-0.503169
 value of new x: 0.341322, y: 0.285102, z:-0.504360
 value of old x: 0.341322, y: 0.285102, z:-0.504360
 value of new x: 0.341679, y: 0.285221, z:-0.505193
-Iteration used: 7 
+value of old x: 0.341679, y: 0.285221, z:-0.505193
+value of new x: 0.341572, y: 0.285114, z:-0.505300
+value of old x: 0.341572, y: 0.285114, z:-0.505300
+value of new x: 0.341497, y: 0.285039, z:-0.505225
+Iteration used: 10 
 Root found... 
-Value of x: 0.341679, y: 0.285221, z: -0.505193
+Value of x: 0.341497, y: 0.285039, z: -0.505225
